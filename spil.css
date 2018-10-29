@@ -1,3 +1,9 @@
+#scene {
+    position: :relative;
+    width: 100vw;
+    height: 56.25vw;
+}
+
 #game_background {
     background-image: url("produktion/baggrund.svg");
     background-size: cover;
@@ -14,8 +20,7 @@
     width: 15vw;
     height: 15vw;
     position: absolute;
-    top: 33vw;
-    left: 25vw;
+    transform: translateX(25vw) translateY(-13vw);
     z-index: 3;
 }
 
@@ -26,8 +31,7 @@
     width: 15vw;
     height: 15vw;
     position: absolute;
-    top: 33vw;
-    left: 60vw;
+    transform: translateX(60vw) translateY(-13vw);
     z-index: 3;
 
 }
@@ -216,4 +220,121 @@
     top: 37vw;
     left: 10vw;
 
+}
+
+#start {
+    background-image: url("produktion/play%20knap.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    top: 12vw;
+    left: 43vw;
+    display: none;
+}
+
+#settings {
+    background-image: url("produktion/Settings.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    top: 2vw;
+    left: 10vw;
+    display: none;
+
+}
+
+#gameover {
+    background-image: url("produktion/game%20over%20knap.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 40vw;
+    position: absolute;
+    top: 4vw;
+    left: 25vw;
+    display: none;
+    z-index: 4;
+}
+
+
+#levelcomplete {
+    background-image: url("produktion/level%20up%20knap.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 55vw;
+    height: 45vw;
+    position: absolute;
+    top: 0vw;
+    left: 21vw;
+    z-index: 5;
+    display: none;
+
+}
+
+.hide {
+
+    display: none;
+}
+
+.fade_in {
+    animation-name: fade_in;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.fade_out {
+    animation-name: fade_out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.move {
+
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+}
+
+@keyframes move {
+    from {
+        transform: translateX(60vw) translateY(-13vw);
+    }
+
+    to {
+        transform: translateX(25vw) translateY(-13vw);
+    }
+
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+    }
 }
